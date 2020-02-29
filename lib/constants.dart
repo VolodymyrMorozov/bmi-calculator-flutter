@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 
 const labelTextStyle = TextStyle(fontSize: 18.0, color: Color(0xff8D8E98));
 const numberTextStyle = TextStyle(fontSize: 50.0, fontWeight: FontWeight.w900);
+const calcTextStyle = TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold);
+const titleTextStyle = TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold);
+const resultTextStyle = TextStyle(
+    color: Color(0xFF24D876), fontSize: 22.0, fontWeight: FontWeight.bold);
+const BMITextStyle = TextStyle(fontWeight: FontWeight.bold, fontSize: 100.0);
+const bodyTextStyle = TextStyle(fontSize: 22.0);
 const bottomContainerHeight = 80.0;
 const bottomContainerColor = Color(0xFFEB1555);
 

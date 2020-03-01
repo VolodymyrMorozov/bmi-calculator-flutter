@@ -1,6 +1,8 @@
+import 'package:bmi_calculator/bmi_calculator.dart';
 import 'package:bmi_calculator/components/calculate_button.dart';
 import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:bmi_calculator/components/round_icon_button.dart';
+import 'package:bmi_calculator/human.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -188,7 +190,7 @@ class _InputPageState extends State<InputPage> {
                               icon: FontAwesomeIcons.plus,
                               onPress: () {
                                 setState(() {
-                                  age--;
+                                  age++;
                                 });
                               },
                             ),
@@ -202,7 +204,11 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           CalculateButton(
-              onTap: () => Navigator.pushNamed(context, '/result_page'),
+              onTap: () {
+                Navigator.pushNamed(context, '/result_page',
+                    arguments: BMICalculator(
+                        human: Human(weight: weight, height: height)));
+              },
               buttonTitle: 'CALCULATE'),
         ],
       ),
